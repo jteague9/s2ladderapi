@@ -19,7 +19,6 @@ class BlizzSession:
         await self._session.close()
 
     async def request(self, method, url, **kwargs):
-        print(url)
         params = {'access_token': self.access_token}
         return await self._request(method, url, params=params, **kwargs)
 
